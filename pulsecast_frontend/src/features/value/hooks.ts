@@ -1,3 +1,5 @@
+"use client";
+
 import { useCallback, useEffect, useState } from "react";
 import { listRunValueSummaries } from "@/api/valueApi";
 import type { ApiError } from "@/api/httpClient";
@@ -31,3 +33,6 @@ export function useValueRuns() {
 
   return { ...state, reload: load };
 }
+
+// Ensure default export for compatibility with any default-imported usage.
+export default useValueRuns;
